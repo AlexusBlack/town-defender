@@ -13,7 +13,7 @@
 	height:198px;
 	z-index:0;
 	background-position: 0px 0px;
-	background: url("grass.png");
+	background: url("img/grass.png");
 }
 #anten {
 	position:absolute;
@@ -23,7 +23,7 @@
 	height:75px;
 	z-index:1;
 	background-position: 0px 0px;
-	background: url("anten.png")no-repeat;
+	background: url("img/anten.png")no-repeat;
 }
 #gov {
 	position:absolute;
@@ -33,7 +33,7 @@
 	height:70px;
 	z-index:1;
 	background-position: 0px 0px;
-	background: url("gov.png")no-repeat;
+	background: url("img/gov.png")no-repeat;
 }
 #tower1 {
 	position:absolute;
@@ -43,7 +43,7 @@
 	height:150px;
 	z-index:1;
 	background-position: 0px 0px;
-	background: url("tower1.png")no-repeat;
+	background: url("img/tower1.png")no-repeat;
 }
 #tower2 {
 	position:absolute;
@@ -53,7 +53,7 @@
 	height:150px;
 	z-index:1;
 	background-position: 0px 0px;
-	background: url("tower1.png")no-repeat;
+	background: url("img/tower1.png")no-repeat;
 }
 #tower3 {
 	position:absolute;
@@ -63,7 +63,7 @@
 	height:120px;
 	z-index:1;
 	background-position: 0px 0px;
-	background: url("tower2.png")no-repeat;
+	background: url("img/tower2.png")no-repeat;
 }
 #house {
 	position:absolute;
@@ -73,7 +73,7 @@
 	height:60px;
 	z-index:1;
 	background-position: 0px 0px;
-	background: url("house.png")no-repeat;
+	background: url("img/house.png")no-repeat;
 }
 #factory {
 	position:absolute;
@@ -83,7 +83,7 @@
 	height:69px;
 	z-index:1;
 	background-position: 0px 0px;
-	background: url("factory.png")no-repeat;
+	background: url("img/factory.png")no-repeat;
 }
 #ship {
 	position:absolute;
@@ -188,36 +188,36 @@ function DestroyHouse(xt,yt) {
 	if(shcount>0) return;
 	//Administration
 	if((xt+22 > 235) && (xt+22 < 308+11) && (yt+50 > 500) && (yt+50 < 570)) {
-		document.getElementById('gov').style.background='url("fire.png")no-repeat';
+		document.getElementById('gov').style.background='url("img/fire.png")no-repeat';
 	}
 	//Tower1
 	if((xt+22 > 150) && (xt+22 < 216+11) && (yt+50 > 450) && (yt+50 < 600)) {
-		document.getElementById('tower1').style.background='url("fire.png")no-repeat';
+		document.getElementById('tower1').style.background='url("img/fire.png")no-repeat';
 		document.getElementById('tower1').style.backgroundPosition='0px 30px';
 	}
 	//Tower2
 	if((xt+22 > 320) && (xt+22 < 386+11) && (yt+50 > 450) && (yt+50 < 600)) {
-		document.getElementById('tower2').style.background='url("fire.png")no-repeat';
+		document.getElementById('tower2').style.background='url("img/fire.png")no-repeat';
 		document.getElementById('tower2').style.backgroundPosition='0px 30px';
 	}
 	//Tower3
 	if((xt+22 > 420) && (xt+22 < 473+11) && (yt+50 > 470) && (yt+50 < 590)) {
-		document.getElementById('tower3').style.background='url("fire.png")no-repeat';
+		document.getElementById('tower3').style.background='url("img/fire.png")no-repeat';
 		document.getElementById('tower3').style.backgroundPosition='0px 20px';
 		lab=0;
 	}
 	//house
 	if((xt+22 > 75) && (xt+22 < 140+11) && (yt+50 > 520) && (yt+50 < 580)) {
-		document.getElementById('house').style.background='url("fire.png")no-repeat';
+		document.getElementById('house').style.background='url("img/fire.png")no-repeat';
 	}
 	//factory
 	if((xt+22 > 3) && (xt+22 < 63+11) && (yt+50 > 520) && (yt+50 < 589)) {
-		document.getElementById('factory').style.background='url("fire.png")no-repeat';
+		document.getElementById('factory').style.background='url("img/fire.png")no-repeat';
 		fac=0;
 	}
 	//anten
 	if((xt+22 > 500) && (xt+22 < 565+11) && (yt+50 > 500) && (yt+50 < 575)) {
-		document.getElementById('anten').style.background='url("fire.png")no-repeat';
+		document.getElementById('anten').style.background='url("img/fire.png")no-repeat';
 		document.getElementById('anten').style.backgroundPosition='0px 20px';
 		ant=0;
 	}
@@ -265,7 +265,7 @@ function RepAnten() {
 	money-=cost;
 	document.getElementById('cmoney').innerHTML=money;
 	//document.getElementById('cshield').innerHTML=cost*2;
-	document.getElementById('anten').style.background='url("anten.png")no-repeat';
+	document.getElementById('anten').style.background='url("img/anten.png")no-repeat';
 	document.getElementById('anten').style.backgroundPosition='0px 0px';
 	ant=1;
 }
@@ -273,25 +273,25 @@ function RepairHouse() {
 	switch(parseInt(Math.random()*5)) {
 		case 0: 
 		fac=1;
-		document.getElementById('factory').style.background='url("factory.png")no-repeat';
+		document.getElementById('factory').style.background='url("img/factory.png")no-repeat';
 		break;
 		case 1: 
-		document.getElementById('house').style.background='url("house.png")no-repeat';
+		document.getElementById('house').style.background='url("img/house.png")no-repeat';
 		break;
 		case 2: 
-		document.getElementById('tower1').style.background='url("tower1.png")no-repeat';
+		document.getElementById('tower1').style.background='url("img/tower1.png")no-repeat';
 		document.getElementById('tower1').style.backgroundPosition='0px 0px';
 		break;
 		case 3: 
-		document.getElementById('tower2').style.background='url("tower1.png")no-repeat';
+		document.getElementById('tower2').style.background='url("img/tower1.png")no-repeat';
 		document.getElementById('tower2').style.backgroundPosition='0px 0px';
 		break;
 		case 4: 
-		document.getElementById('gov').style.background='url("gov.png")no-repeat';
+		document.getElementById('gov').style.background='url("img/gov.png")no-repeat';
 		break;
 		case 5: 
 		lab=1;
-		document.getElementById('tower3').style.background='url("tower2.png")no-repeat';
+		document.getElementById('tower3').style.background='url("img/tower2.png")no-repeat';
 		document.getElementById('tower3').style.backgroundPosition='0px 0px';
 		break;
 	}
@@ -324,18 +324,18 @@ function Main() {
 <div id="tower3"></div>
 <div id="house"></div>
 <div id="factory"></div>
-<img id="ship" src="ship.png">
-<img id="shird" src="shirldB.png" style="position:absolute;left:-25;top:-600;z-index:2;" width=620><!-- 270 -->
+<img id="ship" src="img/ship.png">
+<img id="shird" src="img/shirldB.png" style="position:absolute;left:-25;top:-600;z-index:2;" width=620><!-- 270 -->
 
 <div id="asteroids">
-<img id="a0" src="aster.png" style="position:absolute;left:50;top:-50;z-index:2;">
+<img id="a0" src="img/aster.png" style="position:absolute;left:50;top:-50;z-index:2;">
 </div>
 
 <!--BUTTONS-->
-<img id="santen" src="santen0.png" onclick="RepAnten();">
-<img id="shield" src="shield.png" onclick="ShieldUp();">
-<img id="speed" src="speed.png" onclick="EncSpeed();">
-<img id="money" src="money4.png">
+<img id="santen" src="img/santen0.png" onclick="RepAnten();">
+<img id="shield" src="img/shield.png" onclick="ShieldUp();">
+<img id="speed" src="img/speed.png" onclick="EncSpeed();">
+<img id="money" src="img/money4.png">
 
 <!--LABELS-->
 <div style="position: absolute; left: 630px; top: 50px;"><font color="#ffffff"><div id="cmoney">0</div></font></div>
